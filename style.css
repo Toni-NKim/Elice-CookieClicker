@@ -1,0 +1,29 @@
+header h1 {
+    text-align: center;
+}
+
+.game-body img {
+    width: 23%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.store h2 {
+    display: inline-block;
+}
+
+.split {
+    height: 100%;
+    position: fixed;
+}
+
+.left {
+    left: 0;
+    width: 60%;
+}
+
+.right {
+    right: 0;
+    width: 40%;
+}
