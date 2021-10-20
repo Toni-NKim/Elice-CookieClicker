@@ -4,7 +4,7 @@ const showUsername = () => {
     const nameSpan = document.querySelector('span#username');
     nameSpan.innerHTML = username
 }
-// showUsername()
+showUsername()
 
 // basic ui
 const clickableBread = document.querySelector('#bread');
@@ -15,7 +15,7 @@ const numBreadPerSec = document.querySelector('span#persec')
 const title = document.title
 const updateTitle = () => {
     setInterval(() => {
-        title = String(numBread.innerHTML)
+        title = String(numBread.innerText)
     }, 1000)
 }
 
@@ -35,16 +35,40 @@ const numBakery = document.querySelector('span#numBakery');
 const numCorp = document.querySelector('span#numCorp');
 const numEm = document.querySelector('span#numEm');
 
+// Store cost increments
+const curCost = document.querySelector('span#curCost');
+const granCost = document.querySelector('span#granCost');
+const makerCost = document.querySelector('span#makerCost');
+const bakeryCost = document.querySelector('span#bakeryCost');
+const corpCost = document.querySelector('span#corpCost');
+const emCost = document.querySelector('span#emCost');
+
+// Store cost initialization
+let cursorVal = 15;
+let granVal = 100;
+let makerVal = 1100;
+let bakeryVal = 12000;
+let corpVal = 130000;
+let emVal = 1400000;
+
 // add bread logic
 const addBreads = (val) => {
-    numBread.innerText = parseFloat(numBread.innerText) + val
+    let tmp = (parseFloat(numBread.innerText) + val).toFixed(2)
+    numBread.innerText = tmp
 }
 
+// add payment logic
 const makePayment = (val) => {
     const current = Number(numBread.innerText)
     if (current >= val) {
         numBread.innerText = current - val
     }
+}
+
+// increase cost every click
+const increaseCost = (val) => {
+    val *= 1.1
+    return val.toFixed(2)
 }
 
 // add number of bread baked per second logic when booster purchased
@@ -60,72 +84,118 @@ class Store {
     constructor(breadProduction, cost) {
         this.breadProduction = breadProduction;
         this.cost = cost;
+
     }
     purchase() {
         setInterval(() => {addBreads(this.breadProduction)}, 1000)
         makePayment(this.cost)
         addBreadPerSec(this.breadProduction)
-        console.log('it works')
     }
 }
 
-const addCursor = () => {
-    const newCursor = new Store(1, 15)
+const addCursor = (val) => {
+    const newCursor = new Store(1, val)
     if (numBread.innerText >= newCursor.cost) {
         newCursor.purchase()
+        // increments the number of cursors purchased
         numCursor.innerText = parseInt(numCursor.innerText) + 1
+        // increases the cost
+        curCost.innerText = val
+        // reveals the next level element
+        person.classList.remove('hidden')
     }
 }
 
-cursor.addEventListener('click', addCursor)
 
-const addPerson = () => {
-    const newPerson = new Store(5, 100)
+cursor.addEventListener('click', () => {
+    if (numBread.innerText >= cursorVal) {
+        cursorVal = increaseCost(cursorVal)
+        addCursor(cursorVal)
+        console.log(cursorVal)
+    }
+})
+
+const addPerson = (val) => {
+    const newPerson = new Store(5, val)
     if (numBread.innerText >= newPerson.cost) {
         newPerson.purchase()
         numPerson.innerHTML = parseInt(numPerson.innerHTML) + 1
+        granCost.innerText = increaseCost(val)
+        breadMaker.classList.remove('hidden')
     }
 }
 
-person.addEventListener('click', addPerson)
+person.addEventListener('click', () => {
+    if (numBread.innerText >= granVal) {
+        granVal = increaseCost(granVal)
+        addPerson(granVal)
+    }
+})
 
-const addBreadMaker = () => {
-    const newBreadMaker = new Store(15, 1100)
+const addBreadMaker = (val) => {
+    const newBreadMaker = new Store(15, val)
     if (numBread.innerText >= newBreadMaker.cost) {
         newBreadMaker.purchase()
         numMaker.innerHTML = parseInt(numMaker.innerHTML) + 1
+        makerCost.innerText = increaseCost(val)
+        bakery.classList.remove('hidden')
     }
 }
 
-breadMaker.addEventListener('click', addBreadMaker);
+breadMaker.addEventListener('click', () => {
+    if (numBread.innerText >= makerVal) {
+        makerVal = increaseCost(makerVal)
+        addBreadMaker(makerVal)
+    }
+});
 
-const addBakery = () => {
-    const newBakery = new Store(47, 12000)
+const addBakery = (val) => {
+    const newBakery = new Store(47, val)
     if (numBread.innerText >= newBakery.cost) {
         newBakery.purchase()
         numBakery.innerHTML = parseInt(numBakery.innerHTML) + 1
+        bakeryCost.innerText = increaseCost(val)
+        corporateChain.classList.remove('hidden')
     }
 }
 
-bakery.addEventListener('click', addBakery)
+bakery.addEventListener('click', () => {
+    if (numBread.innerText >= bakeryVal) {
+        makerVal = increaseCost(bakeryVal)
+        addBreadMaker(bakeryVal)
+    }
+})
 
-const addCorporate = () => {
-    const newCorporate = new Store(100, 130000)
+const addCorporate = (val) => {
+    const newCorporate = new Store(100, val)
     if (numBread.innerText >= newCorporate.cost) {
         newCorporate.purchase()
         numCorp.innerHTML = parseInt(numCorp.innerHTML) + 1
+        corpCost.innerText = increaseCost(val)
+        empress.classList.remove('hidden')
     }
 }
 
-corporateChain.addEventListener('click', addCorporate)
+corporateChain.addEventListener('click', () => {
+    if (numBread.innerText >= corpVal) {
+        corpVal = increaseCost(corpVal)
+        addCorporate(corpVal)
+    }
+})
 
-const addEmpress = () => {
-    const newEmpress = new Store(260, 1400000)
+const addEmpress = (val) => {
+    const newEmpress = new Store(260, val)
     if (numBread.innerText >= newEmpress.cost) {
         newEmpress.purchase()
+        emCost.innerText = increaseCost(val)
         numEm.innerHTML = parseInt(numEm.innerHTML) + 1
     }
 }
 
-empress.addEventListener('click', addEmpress)
+empress.addEventListener('click', () => {
+    if (numBread.innerText >= emVal) {
+        emVal = increaseCost(emVal)
+        addEmpress(emVal)
+    }
+})
 

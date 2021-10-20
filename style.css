@@ -14,9 +14,18 @@ header h1 {
     padding-left: 10px;
 }
 
+.store div {
+    border: solid 2px black;
+    margin-bottom: 10px;
+}
+
 .store h2 {
     display: inline-block;
     margin-bottom: 0;
+}
+
+.store div.hidden {
+    visibility: hidden; 
 }
 
 .store h2:hover {
