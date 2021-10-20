@@ -9,8 +9,18 @@ header h1 {
     display: inline-block;
 }
 
+.store {
+    border: solid 2px black;
+    padding-left: 10px;
+}
+
 .store h2 {
     display: inline-block;
+    margin-bottom: 0;
+}
+
+.store h2:hover {
+    cursor:grabbing
 }
 
 .split {
