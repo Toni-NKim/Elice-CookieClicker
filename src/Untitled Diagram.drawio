@@ -1,1 +1,58 @@
-<mxfile host="app.diagrams.net" modified="2021-11-05T00:57:52.610Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.6.8" etag="HeH6or3JIgEIPoMHKfQC" type="github"><diagram id="9pPDvE_OMYeG905Ehizr">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-05T01:05:48.695Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="Hb2uUgl2a3hDLefcx44o" version="15.6.8" type="github">
+  <diagram id="9pPDvE_OMYeG905Ehizr" name="Page-1">
+    <mxGraphModel dx="677" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ijD2c4SSN4JpKdHMXDa4-1" target="ijD2c4SSN4JpKdHMXDa4-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ijD2c4SSN4JpKdHMXDa4-1" target="ijD2c4SSN4JpKdHMXDa4-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-1" value="games" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ijD2c4SSN4JpKdHMXDa4-2" target="ijD2c4SSN4JpKdHMXDa4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ijD2c4SSN4JpKdHMXDa4-2" target="ijD2c4SSN4JpKdHMXDa4-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-2" value="Likes table" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-4" value="date (date)&lt;br&gt;game (varcahr) &lt;br&gt;likes(int)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="330" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ijD2c4SSN4JpKdHMXDa4-6" target="ijD2c4SSN4JpKdHMXDa4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-6" value="Comments table" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-8" value="date (date)&lt;br&gt;nickname (varchar)&lt;br&gt;Comments (varcahr)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="495" y="330" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-10" value="&lt;h1&gt;DB 설계&lt;/h1&gt;&lt;p&gt;db -&amp;gt; two tables&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="70" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-11" value="POST" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-12" value="POST" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="434" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-13" value="TOP 3 games" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-14" value="&lt;h1&gt;페이지 연동&lt;/h1&gt;&lt;p&gt;no. likes -&amp;gt; top 3 games&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="70" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ijD2c4SSN4JpKdHMXDa4-17" value="LIKE 수대로&lt;br&gt;날짜별로 정렬" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
