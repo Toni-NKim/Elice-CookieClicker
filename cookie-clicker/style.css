@@ -22,7 +22,7 @@ body {
 
 header {
     background-color: #F6D7A7;
-    padding: 2rem 2rem;
+    padding: 1.5rem 1.5rem;
 }
 
 header h1 {
@@ -37,9 +37,24 @@ header h1 {
 }
 
 .aligner {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.img {
+    display: inline;
+    margin-left: 20px;
+}
+
+.img img {
+    margin-top: 20px;
+    width: 12%;
+}
+
+.img p {
+    display: inline-block;
 }
 
 #imgs .hidden {
@@ -72,10 +87,6 @@ header h1 {
 
 .store div.hidden {
     visibility: hidden; 
-}
-
-.store h2:hover {
-    cursor:grabbing
 }
 
 .split {
