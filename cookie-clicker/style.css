@@ -46,6 +46,7 @@ header h1 {
 .img {
     display: inline;
     margin-left: 20px;
+    max-width: 60%;
 }
 
 .img img {
