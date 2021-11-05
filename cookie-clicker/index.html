@@ -12,15 +12,43 @@
         <h1>제빵왕 <span id="username"></span>의 세계 제패 도전기</h1>
     </header>
     <div class="game-body split left">
-        <h1>식빵 <span id="number">0</span>개</h1>
-        <h3>1초에 식빵 <span id="persec">0</span>개씩 굽는 중</h3>
-        <img id="bread" src="./src/bread.png" alt="식빵 그림">
+        <div class="aligner">
+            <h1>식빵 <span id="number">0</span>개</h1>
+            <h3>1초에 식빵 <span id="persec">0</span>개씩 굽는 중</h3>
+            <img id="bread" src="src/bread.png"" alt="식빵 그림">
+        </div>
+        <div id="imgs">
+            <div class="img hidden cursor">
+                <img src="https://cdn-icons.flaticon.com/png/512/2576/premium/2576745.png?token=exp=1636081831~hmac=c2edef35ce2c256d8a6a2b4c4120f484" alt="cursor-image">
+                <p><span class="showCur">1</span>개</p>
+            </div>
+            <div class="img hidden granny">
+                <img src="https://cdn-icons.flaticon.com/png/512/2775/premium/2775983.png?token=exp=1636081658~hmac=bbe08fb9a5b075a1d841bef933fe99b1" alt="">
+                <p><span class="showGran">1</span>명</p>
+            </div>
+            <div class="img hidden maker">
+                <img src="https://cdn-icons-png.flaticon.com/512/4352/4352991.png" alt="">
+                <p><span class="showMkr">1</span>대</p>
+            </div>
+            <div class="img hidden bakery">
+                <img src="https://cdn-icons.flaticon.com/png/512/1772/premium/1772872.png?token=exp=1636081750~hmac=2258085b872e5a0a63bad4ea8050159c" alt="">
+                <p><span class="showBkr">1</span>지점</p>
+            </div>
+            <div class="img hidden corp">
+                <img src="https://cdn-icons.flaticon.com/png/512/3728/premium/3728116.png?token=exp=1636081766~hmac=f11edb6933b8672fa0774bd445700647" alt="">
+                <p><span class="showCrp">1</span>곳</p>
+            </div>
+            <div class="img hidden empress">
+                <img src="https://newsimg.sedaily.com/2021/09/09/22REC9963D_2.jpg" alt="">
+                <p><span class="showEmp">1</span>명</p>
+            </div>
+        </div>
     </div>
     <div class="store split right">
-        <h2>레벨업</h2><br>
+        <h2 id="lv">레벨업</h2><br>
         <h3>다음 레벨은 현 레벨 구매 후 공개됩니다 !</h3>
         <div id="cursor">
-            <h2>커서<span id="numCursor">0</span>개 / 1초당 식빵 1개</h2>
+            <h2>커서 <span id="numCursor">0</span>개 / 1초당 식빵 1개</h2>
             <h3>식빵<span id="curCost">16.5</span>개일 때 구매 가능</h3>
         </div>
         <div id="granny" class="hidden">
@@ -28,19 +56,19 @@
             <h3>식빵 <span id="granCost">110</span>개일 때 구매 가능</h3>
         </div>
         <div id="breadMaker" class="hidden">
-            <h2>가정용 제빵기 <span id="numMaker">0</span>개 / 1초당 식빵 15개</h2><br> 
+            <h2>가정용 제빵기 <span id="numMaker">0</span>대 / 1초당 식빵 15개</h2>
             <h3>식빵 <span id="makerCost">1210</span>개일 때 구매 가능</h3>
         </div>
         <div id="bakery" class="hidden">
-            <h2>동네 베이커리 <span id="numBakery">0</span>지점 / 1초당 식빵 47개</h2><br>
+            <h2>동네 베이커리 <span id="numBakery">0</span>지점 / 1초당 식빵 47개</h2>
             <h3>식빵 <span id="bakeryCost">13200</span>개일 때 구매 가능</h3>
         </div>
         <div id="corporateChain" class="hidden">
-            <h2 >S*C 체인 제빵공장 <span id="numCorp">0</span>곳 / 1초당 식빵 100개</h2><br>
+            <h2>S*C 체인 제빵공장 <span id="numCorp">0</span>곳 / 1초당 식빵 100개</h2>
             <h3>식빵 <span id="corpCost">143000</span>개일 때 구매 가능</h3>
         </div>
         <div id="empress" class="hidden">
-            <h2  >연경 언니 <span id="numEm">0</span>명 / 1초당 식빵 260개</h2><br>
+            <h2>식빵 언니 <span id="numEm">0</span>명 / 1초당 식빵 260개</h2>
             <h3>식빵 <span id="emCost">1540000</span>개일 때 구매 가능</h3>
         </div>
     </div>
